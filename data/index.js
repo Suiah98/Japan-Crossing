@@ -61,7 +61,7 @@ function JapanTime() {
   // using supplied offset
   nd = new Date(utc + (3600000 * offset));
 
-  document.getElementById("time").innerHTML = "Hora actual: " + nd.toLocaleString();
+  document.getElementById("time").innerHTML = "Hora actual de Tokio: " + nd.toLocaleString();
   // return time as a string
   return nd.toLocaleString();
 }

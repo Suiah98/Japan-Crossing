@@ -23,7 +23,7 @@ function random() {
   } else if (number == 7) {
     videoid = '4TnsTVJMGe4'
   } else if (number == 8) {
-    videoid = 'lkIJYc4UH60'
+    videoid = 'EXM7NSKsUP8'
   } else if (number == 9) {
     videoid = '_kNCRJ2Ray0'
   }
@@ -104,7 +104,119 @@ sptime = sptime.split(':')
 
 function acnhmusicon() {
   document.getElementById("acnhmusicon").style.display = 'none';
-  if (/0:*$/g.test(sptime[0])) {
+  if (/10:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/10am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("10am");
+  } else if (/11:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/11am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("11am");
+  } else if (/12:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/12pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("12pm");
+  } else if (/13:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/1pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("1pm");
+  } else if (/14:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/2pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("2pm");
+  } else if (/15:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/3pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("3pm");
+  } else if (/16:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/4pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("4pm");
+  } else if (/17:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/5pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("5pm");
+  } else if (/18:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/6pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("6pm");
+  } else if (/19:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/7pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("7pm");
+  } else if (/20:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/8pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("8pm");
+  } else if (/21:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/9pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("9pm");
+  } else if (/22:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/10pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("10pm");
+  } else if (/23:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/11pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("11pm");
+  } else if (/0:*$/g.test(sptime[0])) {
     var audio = new Audio('data/music/12am.mp3');
     audio.addEventListener('ended', function () {
       this.currentTime = 0;
@@ -184,29 +296,5 @@ function acnhmusicon() {
     }, false);
     audio.play();
     console.log("9am");
-  } else if (/10:*$/g.test(sptime[0])) {
-    var audio = new Audio('data/music/10am.mp3');
-    audio.addEventListener('ended', function () {
-      this.currentTime = 0;
-      this.play();
-    }, false);
-    audio.play();
-    console.log("10am");
-  } else if (/11:*$/g.test(sptime[0])) {
-    var audio = new Audio('data/music/11am.mp3');
-    audio.addEventListener('ended', function () {
-      this.currentTime = 0;
-      this.play();
-    }, false);
-    audio.play();
-    console.log("11am");
-  } else if (/12:*$/g.test(sptime[0])) {
-    var audio = new Audio('data/music/12pm.mp3');
-    audio.addEventListener('ended', function () {
-      this.currentTime = 0;
-      this.play();
-    }, false);
-    audio.play();
-    console.log("12pm");
   }
 }

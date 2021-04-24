@@ -5,6 +5,11 @@ body {
     -webkit-animation: rainbow 30s ease infinite;
     animation: rainbow 30s ease infinite;
   }
+
+#acnhmusicon {
+  margin-bottom: 30px;
+  }
+
   @-webkit-keyframes rainbow {
     0% { background-position: 0% 50% }
     50% { background-position: 100% 50% }

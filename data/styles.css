@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
 
 body {
-    background: linear-gradient(238deg, #fd8800, #fd008f, #9700fd, #003dfd, #05c7e6, #4bd58d);
-    background-size: 1200% 1200%;
-    -webkit-animation: rainbow 30s ease infinite;
-    animation: rainbow 30s ease infinite;
+    background-image: url("background.jpg");
+    -webkit-animation: rainbow 120s ease infinite;
+    animation: rainbow 120s ease infinite;
     color:white;
     font-family: 'Dosis', sans-serif;
   }
@@ -13,7 +12,7 @@ body {
     color:white;
   }
 
-#acnhmusicon {
+#acnhmusicon , #acnlmusicon {
   margin-bottom: 30px;
   }
 

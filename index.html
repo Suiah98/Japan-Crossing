@@ -30,21 +30,20 @@
 
 <body>
     <div class="container">
-        <img class="img-fluid rounded mx-auto d-block" src="data/logo.png" />
+        <img class="img-fluid rounded mx-auto d-block" alt="Japan Crossing" src="data/logo.png" />
         <p class="text-center fs-4">Japan Crossing is a website where you can enjoy cameras from Japan with music
             from
-            Animal Crossing New Horizons in the background depending on the time it is there</p>
+            Animal Crossing in the background depending on the time it is there</p>
         <p id="time" class="text-center fs-3"></p>
         <div class="col-md-12 text-center">
             <button id="acnhmusicon" onclick="acnhmusicon()" type="button" class="btn btn-success">Play
-                Animal
-                Crossing
-                Music!</button>
+                New Horizons Music!</button> &nbsp;
+            <button id="acnlmusicon" onclick="acnlmusicon()" type="button" class="btn btn-success">Play
+                New Leaf Music!</button>
         </div>
         <div class=video-container>
             <div id="YouTubeVideoPlayer"></div>
         </div>
-        <script async src="https://www.youtube.com/iframe_api"></script>
 
     </div>
 
@@ -52,7 +51,9 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
     <script src="data/index.js"></script>
-    <div class="footer-copyright text-center py-3">Version: 1.2 - Made with love to Japan and Animal Crossing ❤️ - 2021 - Suian | <a href="https://github.com/Suiah98">GitHub</a>
+    <script async src="https://www.youtube.com/iframe_api"></script><img class="img-fluid rounded mx-auto d-block" onclick="reset()" src="data/resetti.png" />
+    <div class="footer-copyright text-center py-3">Version: 2.0 - Made with love to Japan and Animal Crossing ❤️ - 2021
+        - Suian | <a href="https://github.com/Suiah98">GitHub</a>
     </div>
 </body>
 

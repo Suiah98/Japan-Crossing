@@ -9,11 +9,11 @@ function random() {
   if (number == 0) {
     videoid = 'n3B8fp-Henc'
   } else if (number == 1) {
-    videoid = 'mL6gscTYtjs'
+    videoid = '13c7r2Mzyjk'
   } else if (number == 2) {
     videoid = 'nuJ6O5G-UlA'
   } else if (number == 3) {
-    videoid = 'bE7gcov8CnA'
+    videoid = '3vHug3no6L0'
   } else if (number == 4) {
     videoid = '043CnHFYl0U'
   } else if (number == 5) {
@@ -31,7 +31,7 @@ function random() {
   } else if (number == 11) {
     videoid = 'hywqg7QXXv8'
   } else if (number == 12) {
-    videoid = '2Yj5AynKLk4'
+    videoid = 'IMvXi334l8k'
   } else if (number == 13) {
     videoid = 'fv9Iz0CWpPk'
   } else if (number == 14) {
@@ -39,11 +39,11 @@ function random() {
   } else if (number == 15) {
     videoid = 'yIoPisyFE64'
   } else if (number == 16) {
-    videoid = 'EcY2HyV1bkk'
+    videoid = 'B64S8N96oPw'
   } else if (number == 17) {
     videoid = 'WAEbmMuHkp8'
   } else if (number == 18) {
-    videoid = 'CHuBQVFT6xg'
+    videoid = 'WErs1icxQtY'
   } else if (number == 19) {
     videoid = '6JTC2g8MarE'
   }

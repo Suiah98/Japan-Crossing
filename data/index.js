@@ -9,11 +9,11 @@ function random() {
   if (number == 0) {
     videoid = 'n3B8fp-Henc'
   } else if (number == 1) {
-    videoid = '13c7r2Mzyjk'
+    videoid = 'fvAXgtGAgB8'
   } else if (number == 2) {
-    videoid = 'nuJ6O5G-UlA'
+    videoid = 'GbPO8qTmmaw'
   } else if (number == 3) {
-    videoid = '3vHug3no6L0'
+    videoid = '5znXwwD0HjQ'
   } else if (number == 4) {
     videoid = '043CnHFYl0U'
   } else if (number == 5) {
@@ -23,7 +23,7 @@ function random() {
   } else if (number == 7) {
     videoid = 'L33a7ZzWqaw'
   } else if (number == 8) {
-    videoid = 'mAb6pKWq-Mw'
+    videoid = '1QB9t0DQK1U'
   } else if (number == 9) {
     videoid = '_kNCRJ2Ray0'
   } else if (number == 10) {
@@ -33,19 +33,19 @@ function random() {
   } else if (number == 12) {
     videoid = 'IMvXi334l8k'
   } else if (number == 13) {
-    videoid = 'fv9Iz0CWpPk'
+    videoid = 'E6Qr5kDcnfM'
   } else if (number == 14) {
     videoid = 'QOjmvL3e7Lc'
   } else if (number == 15) {
-    videoid = 'yIoPisyFE64'
+    videoid = 'KIXprc4-ifE'
   } else if (number == 16) {
     videoid = 'B64S8N96oPw'
   } else if (number == 17) {
     videoid = 'WAEbmMuHkp8'
   } else if (number == 18) {
-    videoid = 'WErs1icxQtY'
+    videoid = 'q42k7GOMvzo'
   } else if (number == 19) {
-    videoid = '6JTC2g8MarE'
+    videoid = '-oyXzprNB0I'
   }
 }
 
@@ -159,7 +159,7 @@ let snow = (function () {
         script.onload = function () {
           callFunctionFromScript();
         }
-        script.src = 'http://www.schillmania.com/projects/snowstorm/snowstorm.js';
+        script.src = 'data/snowstorm.js';
         head.appendChild(script);
         document.body.style.backgroundImage = "url('https://p4.wallpaperbetter.com/wallpaper/1009/498/357/animal-crossing-animal-crossing-new-leaf-new-leaf-pattern-wallpaper-preview.jpg')";
       }

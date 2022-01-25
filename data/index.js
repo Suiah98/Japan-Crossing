@@ -9,13 +9,13 @@ function random() {
   if (number == 0) {
     videoid = 'n3B8fp-Henc'
   } else if (number == 1) {
-    videoid = 'fvAXgtGAgB8'
+    videoid = 'h07hCsXYLV4'
   } else if (number == 2) {
     videoid = 'GbPO8qTmmaw'
   } else if (number == 3) {
     videoid = '5znXwwD0HjQ'
   } else if (number == 4) {
-    videoid = '043CnHFYl0U'
+    videoid = '7ParEly6akk'
   } else if (number == 5) {
     videoid = '_dDAdE1TgAA'
   } else if (number == 6) {
@@ -23,29 +23,29 @@ function random() {
   } else if (number == 7) {
     videoid = 'L33a7ZzWqaw'
   } else if (number == 8) {
-    videoid = '1QB9t0DQK1U'
+    videoid = 'vDSzjKsup4k'
   } else if (number == 9) {
     videoid = '_kNCRJ2Ray0'
   } else if (number == 10) {
-    videoid = '5KzxUq8KXZk'
+    videoid = 'fhCsEIWKaTQ'
   } else if (number == 11) {
-    videoid = 'hywqg7QXXv8'
+    videoid = 'hLpqXrNFyCg'
   } else if (number == 12) {
     videoid = 'IMvXi334l8k'
   } else if (number == 13) {
-    videoid = 'E6Qr5kDcnfM'
+    videoid = 'PGggx7llyf8'
   } else if (number == 14) {
     videoid = 'QOjmvL3e7Lc'
   } else if (number == 15) {
     videoid = 'KIXprc4-ifE'
   } else if (number == 16) {
-    videoid = 'B64S8N96oPw'
+    videoid = 'eCrXJmXw2nI'
   } else if (number == 17) {
     videoid = 'WAEbmMuHkp8'
   } else if (number == 18) {
-    videoid = 'q42k7GOMvzo'
+    videoid = 'yjrEj0gKmlw'
   } else if (number == 19) {
-    videoid = '-oyXzprNB0I'
+    videoid = 'zOV4OlQIM2w'
   }
 }
 
@@ -148,11 +148,12 @@ halloween();
 // Nieve en Diciembre
 let snow = (function () {
   let executed = false;
-  let toyday = new RegExp('/12');
+  let december = new RegExp('/12');
+  let january = new RegExp('/1/');
   return function () {
     if (!executed) {
       executed = true;
-      if (toyday.test(sptime[0])) {
+      if (december.test(sptime[0])) {
         let head = document.getElementsByTagName('head')[0];
         let script = document.createElement('script');
         script.type = 'text/javascript';
@@ -162,7 +163,20 @@ let snow = (function () {
         script.src = 'data/snowstorm.js';
         head.appendChild(script);
         document.body.style.backgroundImage = "url('https://p4.wallpaperbetter.com/wallpaper/1009/498/357/animal-crossing-animal-crossing-new-leaf-new-leaf-pattern-wallpaper-preview.jpg')";
+        document.body.style.color = "#4a4a4a";
       }
+    }
+    if (january.test(sptime[0])) {
+      let head = document.getElementsByTagName('head')[0];
+      let script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.onload = function () {
+        callFunctionFromScript();
+      }
+      script.src = 'data/snowstorm.js';
+      head.appendChild(script);
+      document.body.style.backgroundImage = "url('https://cutewallpaper.org/25/animal-crossing-repeat-wallpaper/shop-99dfe-personal-b0b12-drawing-fd165-of-9f58f-your-372bd-character-d012b-signature-f06a2-the-e4471-bell---tree---animal---crossing---forums.png')";
+      document.body.style.color = "#4a4a4a";
     }
   };
 })();

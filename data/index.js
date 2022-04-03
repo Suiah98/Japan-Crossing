@@ -1,82 +1,3 @@
-
-let videoid;
-
-function random() {
-  let number = Math.floor(Math.random() * 20);
-
-  console.log(number);
-
-  if (number == 0) {
-    videoid = 'n3B8fp-Henc'
-  } else if (number == 1) {
-    videoid = 'h07hCsXYLV4'
-  } else if (number == 2) {
-    videoid = 'GbPO8qTmmaw'
-  } else if (number == 3) {
-    videoid = '5znXwwD0HjQ'
-  } else if (number == 4) {
-    videoid = '7ParEly6akk'
-  } else if (number == 5) {
-    videoid = '_dDAdE1TgAA'
-  } else if (number == 6) {
-    videoid = 'HpdO5Kq3o7Y'
-  } else if (number == 7) {
-    videoid = 'L33a7ZzWqaw'
-  } else if (number == 8) {
-    videoid = 'vDSzjKsup4k'
-  } else if (number == 9) {
-    videoid = '_kNCRJ2Ray0'
-  } else if (number == 10) {
-    videoid = 'fhCsEIWKaTQ'
-  } else if (number == 11) {
-    videoid = 'hLpqXrNFyCg'
-  } else if (number == 12) {
-    videoid = 'IMvXi334l8k'
-  } else if (number == 13) {
-    videoid = 'PGggx7llyf8'
-  } else if (number == 14) {
-    videoid = 'QOjmvL3e7Lc'
-  } else if (number == 15) {
-    videoid = 'KIXprc4-ifE'
-  } else if (number == 16) {
-    videoid = 'eCrXJmXw2nI'
-  } else if (number == 17) {
-    videoid = 'WAEbmMuHkp8'
-  } else if (number == 18) {
-    videoid = 'yjrEj0gKmlw'
-  } else if (number == 19) {
-    videoid = 'zOV4OlQIM2w'
-  }
-}
-
-random();
-
-
-function onYouTubeIframeAPIReady() {
-  let player;
-  player = new YT.Player('YouTubeVideoPlayer', {
-    videoId: videoid, // YouTube Video ID
-    width: "100%",               // Player width (in px)
-    height: "100%",              // Player height (in px)
-    playerVars: {
-      autoplay: 1,        // Auto-play the video on load
-      controls: 1,        // Show pause/play buttons in player
-      showinfo: 0,        // Hide the video title
-      modestbranding: 1,  // Hide the Youtube Logo
-      loop: 1,            // Run the video in a loop
-      fs: 1,              // Hide the full screen button
-      cc_load_policy: 0, // Hide closed captions
-      iv_load_policy: 3,  // Hide the Video Annotations
-      autohide: 0         // Hide video controls when playing
-    },
-    events: {
-      onReady: function (e) {
-        e.target.mute();
-      }
-    }
-  });
-}
-
 function JapanTime() {
   offset = +9
   // create Date object for current location
@@ -407,6 +328,12 @@ function acnhmusicon() {
     audio.play();
     console.log("9am");
   }
+}
+
+// Recarga el iframe de los vídeos
+function reloadiframe() {
+  var iframe = document.getElementById('iframe');
+  iframe.src = iframe.src;
 }
 
 // New Leaf Music , primero se comprueba si estamos en alguna fecha especial

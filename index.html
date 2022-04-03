@@ -36,26 +36,35 @@
             from
             Animal Crossing in the background depending on the time it is there</p>
         <p id="time" class="text-center fs-3"></p>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/35d69139d69/tokyo/" data-label_1="TOKIO"
+            data-label_2="WEATHER" data-mode="Current" data-days="3" data-theme="weather_one">TOKIO WEATHER</a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
+        <br>
         <div class="col-md-12 text-center">
-            <button id="acnhmusicon" onclick="acnhmusicon()" type="button" class="btn btn-success">Play
-                New Horizons Music!</button> &nbsp;
-            <button id="acnlmusicon" onclick="acnlmusicon()" type="button" class="btn btn-success">Play
-                New Leaf Music!</button>
+            <button id="acnhmusicon" onclick="acnhmusicon()" type="button" class="btn btn-success">New Horizons
+                Music!</button> &nbsp;
+            <button id="acnlmusicon" onclick="acnlmusicon()" type="button" class="btn btn-success">New Leaf
+                Music!</button>
         </div>
-        <div class=video-container>
-            <div id="YouTubeVideoPlayer"></div>
+        <div class="video-container">
+            <iframe id="iframe" src="data/videoplayer.html" allowfullscreen></iframe>
         </div>
-
+        <div class="col-md-12 text-center"><br>
+            <button id="reloadiframe" onclick="reloadiframe()" type="button" class="btn btn-primary">Load Another
+                Live</button>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
     <script src="data/index.js"></script>
-    <script async src="https://www.youtube.com/iframe_api"></script><img class="img-fluid rounded mx-auto d-block"
-        onclick="reset()" src="data/resetti.png" />
-    <div class="footer-copyright text-center py-3">Versión: 2.2 - Made with love to Japan and Animal Crossing ❤️ - 2022
-        - Suian | <a href="https://github.com/Suiah98" target="_blank"><i class="fa fa-github" style="font-size:36px;color:#4a4a4a"></i></a>
+    <br><img class="img-fluid rounded mx-auto d-block" onclick="reset()" src="data/resetti.png" />
+    <div class="footer-copyright text-center py-3">Versión: 3.0 - Made with love to Japan and Animal Crossing ❤️ - 2022
+        Suian - <a href="https://github.com/Suiah98" target="_blank"><i class="fa fa-github"
+                style="font-size:36px;color:#4a4a4a"></i></a>
     </div>
 </body>
 

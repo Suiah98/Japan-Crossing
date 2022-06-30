@@ -111,6 +111,7 @@ function acnhmusicon() {
   let newyeareve = new RegExp('31/12');
   document.getElementById("acnhmusicon").style.display = 'none';
   document.getElementById("acnlmusicon").style.display = 'none';
+  document.getElementById("wwcfmusicon").style.display = 'none';
   if (newyeareve.test(sptime[0])) {
     var audio = new Audio('data/music/acnh/newyeareve.mp3');
     audio.addEventListener('ended', function () {
@@ -343,6 +344,7 @@ function acnlmusicon() {
   let newyeareve = new RegExp('31/12');
   document.getElementById("acnhmusicon").style.display = 'none';
   document.getElementById("acnlmusicon").style.display = 'none';
+  document.getElementById("wwcfmusicon").style.display = 'none';
   if (newyeareve.test(sptime[0])) {
     var audio = new Audio('data/music/acnl/newyeareve.mp3');
     audio.addEventListener('ended', function () {
@@ -553,6 +555,233 @@ function acnlmusicon() {
     console.log("8am");
   } else if (/9:*$/g.test(sptime[0])) {
     var audio = new Audio('data/music/acnl/9am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("9am");
+  }
+}
+
+// Wild World / City Folk Music , primero se comprueba si estamos en alguna fecha especial
+function wwcfmusicon() {
+  let halloween = new RegExp('31/10');
+  let toyday = new RegExp('24/12');
+  let newyeareve = new RegExp('31/12');
+  document.getElementById("acnhmusicon").style.display = 'none';
+  document.getElementById("acnlmusicon").style.display = 'none';
+  document.getElementById("wwcfmusicon").style.display = 'none';
+  if (newyeareve.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/newyeareve.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("new year eve!!");
+  } else if (toyday.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/toyday.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("chritsmas!!");
+  } else if (halloween.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/halloween.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("halloween!!");
+  } else if (/10:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/10am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("10am");
+  } else if (/11:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/11am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("11am");
+  } else if (/12:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/12pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("12pm");
+  } else if (/13:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/1pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("1pm");
+  } else if (/14:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/2pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("2pm");
+  } else if (/15:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/3pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("3pm");
+  } else if (/16:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/4pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("4pm");
+  } else if (/17:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/5pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("5pm");
+  } else if (/18:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/6pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("6pm");
+  } else if (/19:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/7pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("7pm");
+  } else if (/20:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/8pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("8pm");
+  } else if (/21:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/9pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("9pm");
+  } else if (/22:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/10pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("10pm");
+  } else if (/23:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/11pm.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("11pm");
+  } else if (/0:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/12am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("0am");
+  } else if (/1:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/1am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("1am");
+  } else if (/2:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/2am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("2am");
+  } else if (/3:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/3am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("3am");
+  } else if (/4:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/4am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("4am");
+  } else if (/5:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/5am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("5am");
+  } else if (/6:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/6am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("6am");
+  } else if (/7:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/7am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("7am");
+  } else if (/8:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/8am.mp3');
+    audio.addEventListener('ended', function () {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    audio.play();
+    console.log("8am");
+  } else if (/9:*$/g.test(sptime[0])) {
+    var audio = new Audio('data/music/wwcf/9am.mp3');
     audio.addEventListener('ended', function () {
       this.currentTime = 0;
       this.play();

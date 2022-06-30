@@ -12,9 +12,17 @@ body {
     color:white;
   }
 
-#acnhmusicon , #acnlmusicon {
+#acnhmusicon , #acnlmusicon , #wwcfmusicon {
   margin-bottom: 30px;
   }
+
+#acnlmusicon {
+  background-color: rgb(31, 141, 10);
+  }
+
+  #wwcfmusicon {
+    background-color: rgb(9, 138, 37);
+    }
 
   @-webkit-keyframes rainbow {
     0% { background-position: 0% 50% }
@@ -41,3 +49,4 @@ body {
     width: 100%; 
     height: 100%;
 }
+

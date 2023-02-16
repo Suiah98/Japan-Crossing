@@ -14,9 +14,9 @@ function random() {
   } else if (number == 3) {
     videoid = 'gFRtAAmiFbE'
   } else if (number == 4) {
-    videoid = 'bwbxky23xDA'
+    videoid = 'jbFSysHYYJI'
   } else if (number == 5) {
-    videoid = 'X4SczwEaCUg'
+    videoid = '-KZk49f0IBE'
   } else if (number == 6) {
     videoid = 'mfliIqaZddU'
   } else if (number == 7) {
@@ -30,7 +30,7 @@ function random() {
   } else if (number == 11) {
     videoid = 'DjdUEyjx8GM'
   } else if (number == 12) {
-    videoid = 'hC_B8SfUBrc'
+    videoid = 'S4xpYFf2Fvs'
   } else if (number == 13) {
     videoid = 'p9HP6V9-p5Q'
   } else if (number == 14) {

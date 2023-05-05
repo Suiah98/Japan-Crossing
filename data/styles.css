@@ -12,6 +12,11 @@ body {
     color:white;
   }
 
+  #time {
+    font-style: italic;
+    color: ;
+  }
+
 #acnhmusicon , #acnlmusicon , #wwcfmusicon {
   margin-bottom: 30px;
   }

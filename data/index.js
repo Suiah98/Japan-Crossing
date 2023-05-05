@@ -41,7 +41,7 @@ sptime = sptime.split(':')
 
 function reset() {
   alert("WAAAAAAAAH!!! DON'T RESET!!");
-  window.open("https://www.youtube.com/watch?v=t4egB4b2iLo");
+  window.open("https://www.youtube.com/watch?v=ASSVvGa84IA");
 }
 
 // Halloween

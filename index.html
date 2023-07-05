@@ -22,9 +22,9 @@
 <body>
     <div class="container">
         <img class="img-fluid rounded mx-auto d-block" alt="Japan Crossing" src="data/logo.png" />
-        <p class="text-center fs-4">Japan Crossing is a website where you can enjoy cameras from Japan with music
-            from
-            Animal Crossing in the background depending on the time it is there</p>
+        <p class="text-center fs-4">Japan Crossing is a website that provides a serene experience, with real time music
+            from the Animal Crossing game series, along with live feeds from various cameras located throughout Japan.
+        </p>
         <p id="time" class="text-center fs-3"></p>
         <a class="weatherwidget-io" href="https://forecast7.com/en/35d69139d69/tokyo/" data-label_1="TOKIO"
             data-label_2="WEATHER" data-mode="Current" data-days="3" data-theme="weather_one">TOKIO WEATHER</a>
@@ -33,20 +33,21 @@
         </script>
         <br>
         <div class="col-md-12 text-center">
-            <button id="acnhmusicon" onclick="acnhmusicon()" type="button" class="btn btn-success">New Horizons
-                Music!</button> &nbsp;
-            <button id="acnlmusicon" onclick="acnlmusicon()" type="button" class="btn btn-success">New Leaf
-                Music!</button>
-            <button id="wwcfmusicon" onclick="wwcfmusicon()" type="button" class="btn btn-success">WW/CF
-                Music!</button>
+            <button id="acnhmusicon" onclick="acnhmusicon()" type="button" class="btn btn-success">Play New Horizons
+                music</button> &nbsp;
+            <button id="acnlmusicon" onclick="acnlmusicon()" type="button" class="btn btn-success">Play New Leaf
+                music</button>
+            <button id="wwcfmusicon" onclick="wwcfmusicon()" type="button" class="btn btn-success">Play Wild World/City
+                Folk
+                music</button>
         </div>
         <div class="video-container">
             <iframe id="iframe" src="data/videoplayer.html" allowfullscreen></iframe>
         </div>
         <div class="col-md-12 text-center">
             <br>
-            <button id="reloadiframe" onclick="reloadiframe()" type="button" class="btn btn-primary">Load Another
-                Live</button>
+            <button id="reloadiframe" onclick="reloadiframe()" type="button" class="btn btn-primary">Load another
+                camera</button>
         </div>
     </div>
 
@@ -56,11 +57,38 @@
     <script src="data/index.js"></script>
     <br><img class="img-fluid rounded mx-auto d-block" onclick="reset()" src="data/resetti.png" />
     <div class="footer-copyright text-center py-3">
-        Cámaras actualizadas el 05/05/2023 -
-        Versión: 3.2 - Made with love to Japan and Animal Crossing ❤️ - 2023
+        <div id="footer">
+            <p class="fecha-actualizacion">Cameras updated on <span id="fecha-actual"></span></p>
+        </div>
+        Version: 4.0 - Made with love to Japan and Animal Crossing ❤️ - 2023
         Suian - <a href="https://github.com/Suiah98" target="_blank"><i class="fa fa-github"
                 style="font-size:36px;color:#4a4a4a"></i></a>
     </div>
+    <script>
+        // Obtiene la fecha de última modificación del archivo en GitHub
+        function obtenerFechaUltimaModificacion() {
+            var url = 'https://api.github.com/repos/Suiah98/Japan-Crossing/commits?path=data/ids.txt';
+            return fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    var ultimoCommit = data[0];
+                    var fechaModificacion = new Date(ultimoCommit.commit.committer.date);
+                    return fechaModificacion.toLocaleDateString('es-ES');
+                });
+        }
+
+        // Obtiene el elemento del DOM que contiene la información de la fecha
+        var fechaActualElemento = document.getElementById('fecha-actual');
+
+        // Actualiza la fecha en el elemento del DOM
+        obtenerFechaUltimaModificacion()
+            .then(fechaModificacion => {
+                fechaActualElemento.textContent = fechaModificacion;
+            })
+            .catch(error => {
+                console.log('Error al obtener la fecha de última modificación:', error);
+            });
+    </script>
 </body>
 
 </html>

@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
 
-body {
-    background-image: url("background.jpg");
-    -webkit-animation: rainbow 120s ease infinite;
-    animation: rainbow 60s ease infinite;
-    color:white;
-    font-family: 'Dosis', sans-serif;
-  }
+body.day {
+  background-image: url("background.jpg");
+  -webkit-animation: rainbow 120s ease infinite;
+  animation: rainbow 60s ease infinite;
+  color:white;
+  font-family: 'Dosis', sans-serif;
+}
+
+body.night {
+  background-image: url("night.gif");
+  background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en la página */
+  color: white;
+  font-family: 'Dosis', sans-serif;
+}
+
 
   a{
     color:white;
@@ -14,8 +24,11 @@ body {
 
   #time {
     font-style: italic;
-    color: ;
   }
+
+  .selected {
+  border: 2px solid #36ee08; /* Borde cuando el botón está seleccionado */
+}
 
 #acnhmusicon , #acnlmusicon , #wwcfmusicon {
   margin-bottom: 30px;

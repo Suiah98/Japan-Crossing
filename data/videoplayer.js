@@ -1,55 +1,26 @@
 let videoid;
 
-function random() {
-  let number = Math.floor(Math.random() * 20);
+// Función para obtener los IDs de video desde un archivo en GitHub
+async function getVideoIds() {
+  const url = 'https://raw.githubusercontent.com/Suiah98/Japan-Crossing/main/data/ids.txt';
 
-  console.log(number);
+  try {
+    const response = await fetch(url);
+    const data = await response.text();
 
-  if (number == 0) {
-    videoid = 'n3B8fp-Henc'
-  } else if (number == 1) {
-    videoid = 'JW_iNkn95pY'
-  } else if (number == 2) {
-    videoid = 'Fb0imHesPEk'
-  } else if (number == 3) {
-    videoid = 'gFRtAAmiFbE'
-  } else if (number == 4) {
-    videoid = 'tajQD_97clY'
-  } else if (number == 5) {
-    videoid = 'IBFCV4zhMGc'
-  } else if (number == 6) {
-    videoid = 'y65ueOclDaE'
-  } else if (number == 7) {
-    videoid = 'Lybr9mw41ic'
-  } else if (number == 8) {
-    videoid = 'lA6TaaMGgDo'
-  } else if (number == 9) {
-    videoid = '_kNCRJ2Ray0'
-  } else if (number == 10) {
-    videoid = 'qYnCG4J26d8'
-  } else if (number == 11) {
-    videoid = 'DjdUEyjx8GM'
-  } else if (number == 12) {
-    videoid = 'vXZWSlVHvow'
-  } else if (number == 13) {
-    videoid = '5WOdIfrzFGw'
-  } else if (number == 14) {
-    videoid = 'GEPJYPznC_Q'
-  } else if (number == 15) {
-    videoid = 'PMoO-HL7ERA'
-  } else if (number == 16) {
-    videoid = '3CmwLOgQxIY'
-  } else if (number == 17) {
-    videoid = 'nGUKr_COANs'
-  } else if (number == 18) {
-    videoid = '3kPH7kTphnE'
-  } else if (number == 19) {
-    videoid = 'cEKkGnP_ddw'
+    // Dividir el contenido en líneas y seleccionar una línea al azar
+    const lines = data.split('\n');
+    const randomLine = lines[Math.floor(Math.random() * lines.length)];
+
+    // Asignar el valor de videoid a la línea seleccionada
+    videoid = randomLine.trim();
+
+    // Llamar a la función onYouTubeIframeAPIReady para cargar el reproductor de YouTube
+    onYouTubeIframeAPIReady();
+  } catch (error) {
+    console.log(videoid);
   }
 }
-
-random();
-
 
 function onYouTubeIframeAPIReady() {
   let player;
@@ -75,3 +46,5 @@ function onYouTubeIframeAPIReady() {
     }
   });
 }
+
+getVideoIds();

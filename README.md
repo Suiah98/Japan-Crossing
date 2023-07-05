@@ -1,2 +1,2 @@
 # Japan Crossing
-Japan Crossing is a website where you can enjoy cameras from Japan with music from Animal Crossing in the background depending on the time it is there
+Japan Crossing is a website that provides a serene experience, with real time music from the Animal Crossing game series, along with live feeds from various cameras located throughout Japan.

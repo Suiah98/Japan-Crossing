@@ -1,4 +1,5 @@
 let videoid;
+let player;
 
 // Función para obtener los IDs de video desde un archivo en GitHub
 async function getVideoIds() {
@@ -15,15 +16,12 @@ async function getVideoIds() {
     // Asignar el valor de videoid a la línea seleccionada
     videoid = randomLine.trim();
 
-    // Llamar a la función onYouTubeIframeAPIReady para cargar el reproductor de YouTube
-    onYouTubeIframeAPIReady();
   } catch (error) {
-    console.log(videoid);
+    console.error(error);
   }
 }
 
 function onYouTubeIframeAPIReady() {
-  let player;
   player = new YT.Player('YouTubeVideoPlayer', {
     videoId: videoid, // YouTube Video ID
     width: "100%",               // Player width (in px)
@@ -47,4 +45,5 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
-getVideoIds();
+// Llamar getVideoIds y luego onYouTubeIframeAPIReady
+getVideoIds().then(onYouTubeIframeAPIReady).catch(console.error);

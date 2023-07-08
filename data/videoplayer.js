@@ -1,31 +1,22 @@
-let videoid;
+let videoIds = [
+  'n3B8fp-Henc', 'SlJzGdiWo0g', 'Fb0imHesPEk', 'gFRtAAmiFbE',
+  'MZheS4qElQM', 'IBFCV4zhMGc', '14qkV3K5tPs', 'Lybr9mw41ic',
+  'lA6TaaMGgDo', '_kNCRJ2Ray0', 'qYnCG4J26d8', 'DjdUEyjx8GM',
+  '6Doy_fueZ_w', '5WOdIfrzFGw', 'GEPJYPznC_Q', 'VmskSjcvp_8',
+  '3CmwLOgQxIY', 'JJu1e07fQks', '3kPH7kTphnE', '5WOdIfrzFGw'
+];
 
-// Función para obtener los IDs de video desde un archivo local
-async function getVideoIds() {
-  const url = './ids.txt';  // Ruta al archivo local ids.txt
-
-  try {
-    const response = await fetch(url);
-    const data = await response.text();
-
-    // Dividir el contenido en líneas y seleccionar una línea al azar
-    const lines = data.split('\n');
-    const randomLine = lines[Math.floor(Math.random() * lines.length)];
-
-    // Asignar el valor de videoid a la línea seleccionada
-    videoid = randomLine.trim();
-
-    // Llamar a la función onYouTubeIframeAPIReady para cargar el reproductor de YouTube
-    onYouTubeIframeAPIReady();
-  } catch (error) {
-    console.error(`Error: ${error}`);
-  }
+function random() {
+  let index = Math.floor(Math.random() * videoIds.length);
+  let videoid = videoIds[index];
+  console.log(videoid);
+  return videoid;
 }
 
 function onYouTubeIframeAPIReady() {
   let player;
   player = new YT.Player('YouTubeVideoPlayer', {
-    videoId: videoid, // YouTube Video ID
+    videoId: random(), // YouTube Video ID
     width: "100%",               // Player width (in px)
     height: "100%",              // Player height (in px)
     playerVars: {
@@ -46,5 +37,3 @@ function onYouTubeIframeAPIReady() {
     }
   });
 }
-
-getVideoIds();

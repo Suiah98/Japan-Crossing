@@ -60,14 +60,14 @@
         <div id="footer">
             <p class="fecha-actualizacion">Cameras updated on <span id="fecha-actual"></span></p>
         </div>
-        Version: 4.0 - Made with love to Japan and Animal Crossing ❤️ - 2023
+        Version: 4.1 - Made with love to Japan and Animal Crossing ❤️ - 2023
         Suian - <a href="https://github.com/Suiah98" target="_blank"><i class="fa fa-github"
                 style="font-size:36px;color:#4a4a4a"></i></a>
     </div>
     <script>
         // Obtiene la fecha de última modificación del archivo en GitHub
         function obtenerFechaUltimaModificacion() {
-            var url = 'https://api.github.com/repos/Suiah98/Japan-Crossing/commits?path=data/ids.txt';
+            var url = 'https://api.github.com/repos/Suiah98/Japan-Crossing/commits?path=data/videoplayer.js';
             return fetch(url)
                 .then(response => response.json())
                 .then(data => {

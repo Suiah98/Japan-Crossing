@@ -1,39 +1,43 @@
 let videoid;
-let player;
 
+// Función para obtener los IDs de video desde un archivo local
 async function getVideoIds() {
-  const url = 'https://raw.githubusercontent.com/Suiah98/Japan-Crossing/main/data/ids.txt';
+  const url = './ids.txt';  // Ruta al archivo local ids.txt
 
   try {
     const response = await fetch(url);
     const data = await response.text();
+
+    // Dividir el contenido en líneas y seleccionar una línea al azar
     const lines = data.split('\n');
     const randomLine = lines[Math.floor(Math.random() * lines.length)];
+
+    // Asignar el valor de videoid a la línea seleccionada
     videoid = randomLine.trim();
 
-    // Llamar a onYouTubeIframeAPIReady aquí, después de obtener videoid
+    // Llamar a la función onYouTubeIframeAPIReady para cargar el reproductor de YouTube
     onYouTubeIframeAPIReady();
-
   } catch (error) {
-    console.error(error);
+    console.error(`Error: ${error}`);
   }
 }
 
 function onYouTubeIframeAPIReady() {
+  let player;
   player = new YT.Player('YouTubeVideoPlayer', {
-    videoId: videoid,
-    width: "100%",
-    height: "100%",
+    videoId: videoid, // YouTube Video ID
+    width: "100%",               // Player width (in px)
+    height: "100%",              // Player height (in px)
     playerVars: {
-      autoplay: 1,
-      controls: 1,
-      showinfo: 0,
-      modestbranding: 1,
-      loop: 1,
-      fs: 1,
-      cc_load_policy: 0,
-      iv_load_policy: 3,
-      autohide: 0
+      autoplay: 1,        // Auto-play the video on load
+      controls: 1,        // Show pause/play buttons in player
+      showinfo: 0,        // Hide the video title
+      modestbranding: 1,  // Hide the Youtube Logo
+      loop: 1,            // Run the video in a loop
+      fs: 1,              // Hide the full screen button
+      cc_load_policy: 0, // Hide closed captions
+      iv_load_policy: 3,  // Hide the Video Annotations
+      autohide: 0         // Hide video controls when playing
     },
     events: {
       onReady: function (e) {
@@ -43,5 +47,4 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
-// Llama a getVideoIds directamente
-getVideoIds().catch(console.error);
+getVideoIds();

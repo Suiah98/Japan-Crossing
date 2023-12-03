@@ -99,7 +99,9 @@ let snow = (function () {
         }
         script.src = 'data/snowstorm.js';
         head.appendChild(script);
-        document.body.style.backgroundImage = "url('https://p4.wallpaperbetter.com/wallpaper/1009/498/357/animal-crossing-animal-crossing-new-leaf-new-leaf-pattern-wallpaper-preview.jpg')";
+        document.body.style.backgroundImage = "url('data/snowbackground.jpg')";
+        document.body.style.backgroundRepeat = "repeat";
+        document.body.style.backgroundSize = "250px 250px";     
         document.body.style.color = "#4a4a4a";
       }
     }

@@ -1,6 +1,9 @@
 var lastFunction;
 var hasChanged = false;
 
+let isAudioStopped = true;
+let currentTitlePlaying = '';
+
 function tune() {
   stopCurrentAudio();
   let audio = new Audio('data/music/tune.mp3');
@@ -133,6 +136,30 @@ function stopCurrentAudio() {
   }
 }
 
+function playMusic(gameTitle){
+  // We toggle music play if it's the same game title by a simple bool
+  // But if user wants to play song from another title we play the audio right on
+  if(!isAudioStopped && currentTitlePlaying == gameTitle){
+    currentAudio.pause();
+  }
+  else{
+    currentTitlePlaying = gameTitle;
+    stopCurrentAudio();
+    switch (gameTitle) {
+      case 'acnh':
+        acnhmusicon();
+        break;
+      case 'acnl':
+        acnlmusicon();
+        break;
+      case 'wwcf':
+        wwcfmusicon();
+        break;
+    }
+  }
+  isAudioStopped = !isAudioStopped;
+}
+
 // New Horizons Music , primero se comprueba si estamos en alguna fecha especial
 function acnhmusicon() {
   // Remover la clase "selected" de los otros botones
@@ -142,8 +169,6 @@ function acnhmusicon() {
 
   // Agregar la clase "selected" al botón actual
   document.getElementById("acnhmusicon").classList.add("selected");
-  // Detener la reproducción del audio actual
-  stopCurrentAudio();
   let halloween = new RegExp('31/10');
   let toyday = new RegExp('24/12');
   let newyeareve = new RegExp('31/12');
@@ -436,7 +461,6 @@ function acnlmusicon() {
   // Agregar la clase "selected" al botón actual
   document.getElementById("acnlmusicon").classList.add("selected");
   // Detener la reproducción del audio actual
-  stopCurrentAudio();
   let halloween = new RegExp('31/10');
   let toyday = new RegExp('24/12');
   let newyeareve = new RegExp('31/12');
@@ -723,7 +747,6 @@ function wwcfmusicon() {
   // Agregar la clase "selected" al botón actual
   document.getElementById("wwcfmusicon").classList.add("selected");
   // Detener la reproducción del audio actual
-  stopCurrentAudio();
   let halloween = new RegExp('31/10');
   let toyday = new RegExp('24/12');
   let newyeareve = new RegExp('31/12');

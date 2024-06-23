@@ -125,10 +125,8 @@ let snow = (function () {
 
 snow();
 
-// Variables para almacenar las referencias a los objetos de audio
 let currentAudio = null;
 
-// Función para detener la reproducción del audio actual
 function stopCurrentAudio() {
   if (currentAudio) {
     currentAudio.pause();

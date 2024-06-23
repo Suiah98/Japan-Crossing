@@ -10,9 +10,9 @@ body.day {
 
 body.night {
   background-image: url("night.gif");
-  background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position: center; /* Centra la imagen en la página */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: white;
   font-family: 'Dosis', sans-serif;
 }
@@ -27,7 +27,7 @@ body.night {
   }
 
   .selected {
-  border: 2px solid #36ee08; /* Borde cuando el botón está seleccionado */
+  border: 2px solid #36ee08;
 }
 
 #acnhmusicon , #acnlmusicon , #wwcfmusicon {
